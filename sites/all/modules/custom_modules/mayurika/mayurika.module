@@ -29,5 +29,20 @@ function mayurika_services_resources() {
         ),
       ),
     ),
+    'saree' => array(
+      'operations' => array(
+        'index' => array(
+          'help' => 'Get Content Page',
+          'file' => array(
+            'type' => 'inc',
+            'module' => 'mayurika',
+            'name' => 'include/mayurika',
+          ),
+          'callback' => 'mayurika_get_saree',
+          'access callback' => 'mayurika_get_saree_access',
+          'access arguments append' => TRUE,
+        ),
+      ),
+    ),
 	);
 }
