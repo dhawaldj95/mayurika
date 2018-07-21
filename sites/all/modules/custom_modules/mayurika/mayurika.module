@@ -1,0 +1,33 @@
+<?php
+	
+/**
+ * Implements hook_services_resources().
+ */
+function mayurika_services_resources() {
+	return array(
+		'content-page' => array(
+      'operations' => array(
+        'index' => array(
+          'help' => 'Get Content Page',
+          'file' => array(
+            'type' => 'inc',
+            'module' => 'mayurika',
+            'name' => 'include/mayurika',
+          ),
+          'callback' => 'inno_get_content_page',
+          // 'args' => array(
+          //   array(
+          //     'name' => 'url',
+          //     'type' => 'string',
+          //     'description' => 'url of page',
+          //     'source' => array('path' => 0),
+          //     'optional' => TRUE,
+          //   ),
+          // ),
+          'access callback' => 'inno_get_content_page_access',
+          'access arguments append' => TRUE,
+        ),
+      ),
+    ),
+	);
+}
