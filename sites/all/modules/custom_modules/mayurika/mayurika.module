@@ -44,5 +44,50 @@ function mayurika_services_resources() {
         ),
       ),
     ),
+    'kurti' => array(
+      'operations' => array(
+        'index' => array(
+          'help' => 'Get All kurties',
+          'file' => array(
+            'type' => 'inc',
+            'module' => 'mayurika',
+            'name' => 'include/mayurika',
+          ),
+          'callback' => 'mayurika_get_kurti',
+          'access callback' => 'mayurika_get_kurti_access',
+          'access arguments append' => TRUE,
+        ),
+      ),
+    ),
+    'lehenga' => array(
+      'operations' => array(
+        'index' => array(
+          'help' => 'Get All lehenga',
+          'file' => array(
+            'type' => 'inc',
+            'module' => 'mayurika',
+            'name' => 'include/mayurika',
+          ),
+          'callback' => 'mayurika_get_lehenga',
+          'access callback' => 'mayurika_get_lehenga_access',
+          'access arguments append' => TRUE,
+        ),
+      ),
+    ),
+    'banner' => array(
+      'operations' => array(
+        'index' => array(
+          'help' => 'Get All banner',
+          'file' => array(
+            'type' => 'inc',
+            'module' => 'mayurika',
+            'name' => 'include/mayurika',
+          ),
+          'callback' => 'mayurika_get_banner',
+          'access callback' => 'mayurika_get_banner_access',
+          'access arguments append' => TRUE,
+        ),
+      ),
+    ),
 	);
 }
